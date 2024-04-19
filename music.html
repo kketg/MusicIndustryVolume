@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolutions of Music Industry Standard Formats</title>
+    <!-- Include ObservableHQ inspector stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            color: white; 
+            font-family: Tahoma, sans-serif; /* Use Courier New font */
+            font-weight: bold; /* Set font weight to bold */
+        }
+        
+        #black-bar {
+            background-color: black;
+            color: white;
+            padding: 10px 10px; 
+            text-align: center;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; 
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            margin: 0px 0;
+            padding: 10px;
+            background-color: rgba(20, 18, 72, 0.215); /* Light background for visibility */
+        }
+
+        .image-item {
+            margin: 0 10px;
+            text-align: center; /* Center the text below images */
+        }
+
+        .image-item img {
+            width: 100%;
+            max-width: 400px; /* Adjust the size of images */
+        }
+
+        .image-item p {
+            color: white;
+            margin-top: 5px;
+        }
+
+        .center-container {
+            display: flex;  /* Use Flexbox to control the layout */
+            justify-content: center;  /* Center content horizontally */
+            width: 100%;  /* Full width to ensure it spans the entire width of its parent */
+        }
+        .main-title {
+            font-size: 36px; 
+            text-align: center;
+            margin: 20px;
+        }
+
+        #in1cm{
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 24px; 
+            text-align: left;
+            margin: 10px;
+            margin-top: 10px; 
+        }
+
+        .container {
+            display: flex;
+            margin: 20px 20px; /* Adjust left and right margin for containers */
+            background-color: rgba(255, 255, 255, 0);
+            
+            border-radius: 0;
+            box-shadow: 0 2px 5px rgba(19, 24, 73, 0.1);
+            overflow: hidden;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        .observablehq-container {
+            flex: 1; /* Dynamically stretches to fill available space */
+            padding: 0;
+            border-radius: 0;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="black-bar">
+        <div class="main-title">Evolutions of Music Industry Standard Formats</div>
+    </div>
+
+    <video id="background-video" loop muted autoplay>
+        <source src="waves.mp4" type="video/mp4">
+        <!-- Add other source elements for different video formats if needed -->
+    </video>
+    <!--Stream Chart-->
+    <h2 style="text-align:center;">Total Music Revenues By Format (Aggregated)</h2>
+    <div class="center-container">
+     
+    
+    <div id="observablehq-chart-a728726a"></div>
+        <div id="observablehq-toggleView-a728726a"></div>
+    </div>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+        <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/e0045c3a304cc9a6@563.js?v=4";
+        new Runtime().module(define, name => {
+        if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-a728726a"));
+        if (name === "toggleView") return new Inspector(document.querySelector("#observablehq-toggleView-a728726a"));
+        });
+</script>
+
+    <div id="black-bar">
+        <div class="main-title">But like that's a lot of music. Where are we putting it all?</div>
+    </div>
+
+    <h1 id="in1cm">In one cubic meter you could fit...†</h1>
+    
+
+    <div class="image-gallery">
+        
+        <div class="image-item">
+            <img src="vinyl1m3.png" alt="Vinyl">
+            <p>~8,841 12" Vinyl Records</p>
+        </div>
+        <div class="image-item">
+            <img src="cassette1m3.png" alt="Cassette">
+            <p>~12,351 Compact Cassette Tapes</p>
+        </div>
+        <div class="image-item">
+            <img src="cd1m3.png" alt="CD">
+            <p>~73,682 Standard CDs</p>
+        </div>
+        <div class="image-item">
+            <img src="downloads_hdd1m3.png" alt="Hard Drives">
+            <p>~3,341 Standard Consumer Hard Drives, <br> and ~94,000 Terabytes of Music*</p>
+        </div>
+    </div>
+    
+
+    <div id="observablehq-chart-3cb9504e"></div>
+    <div id="observablehq-chart-3941b5a4"></div>
+
+    <div id="black-bar">
+        <div class="main-title">But what about streaming?</div>
+    </div>
+    <p>Since streaming isn't measured in "sales", and a song isn't duplicated when someone listens to it, we only need to account for every song available on streaming once.</p>
+    <p>There are ~184,000,000 songs available for streaming**</p>
+    
+    <p>† All volume data is purely estimation based on the standard dimensions of physical formats and data size averages of commercial music.</p>
+    <p>* As of April 2024, the largest commercially available consumer hard drive has a storage size of 30 Terabytes.</p>
+    <p>** In their 2023 Year End Report on the music industry, Luminate tracked ~184 million ISRCs on streaming platforms, each one representing an individual song.</p>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/c66c1d5ed01bd74e@241.js?v=4&api_key=1e2742932f45dd0c27c62112deeecc2f2efc6d15";
+    new Runtime().module(define, name => {
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3941b5a4"));
+    });
+    </script>
+    </script>
+    </script>
+    
+</body>
+
+</html>
