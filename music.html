@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <style>
         body {
-            background-color: rgb(0, 0, 0);
+            background-color: rgba(20, 18, 72, 0.4);
             margin: 0;
             padding: 0;
             color: white; 
@@ -33,12 +33,16 @@
             z-index: -1; 
         }
 
+        .tint{
+            background-color: rgba(20, 18, 72, 0.4);
+        }
+
         .image-gallery {
             display: flex;
             justify-content: center;
             margin: 0px 0;
             padding: 10px;
-            background-color: rgba(20, 18, 72, 0.215); /* Light background for visibility */
+            background-color: rgba(20, 18, 72, 0.4); /* Light background for visibility */
         }
 
         .image-item {
@@ -98,15 +102,17 @@
     </style>
 </head>
 
+<video id="background-video" loop muted autoplay>
+    <source src="waves.mp4" type="video/mp4">
+    <!-- Add other source elements for different video formats if needed -->
+</video>
+
 <body>
     <div id="black-bar">
         <div class="main-title">Evolutions of Music Industry Standard Formats</div>
     </div>
 
-    <video id="background-video" loop muted autoplay>
-        <source src="waves.mp4" type="video/mp4">
-        <!-- Add other source elements for different video formats if needed -->
-    </video>
+    
     <!--Stream Chart-->
     <h2 style="text-align:center;">Total Music Revenues By Format (Aggregated)</h2>
     <div class="center-container">
@@ -154,18 +160,40 @@
     </div>
     
 
-    <div id="observablehq-chart-3cb9504e"></div>
-    <div id="observablehq-chart-3941b5a4"></div>
+    <div id="observablehq-chart-3927447b"></div>
 
     <div id="black-bar">
         <div class="main-title">But what about streaming?</div>
     </div>
-    <p>Since streaming isn't measured in "sales", and a song isn't duplicated when someone listens to it, we only need to account for every song available on streaming once.</p>
-    <p>There are ~184,000,000 songs available for streaming**</p>
+    <div style="text-align:center;" class="tint">
+        <h2>
+            Since streaming isn't measured in individual sales like the other formats, and a song isn't duplicated when someone listens to it on stremaing, we only need to account for every song available on streaming once. 
+        </h2>
+        <br>
+        <h1>
+            There are ~184,000,000 songs available for streaming**
+        </h1>
+        <br>
+        <h2>
+            So, just for fun, lets figure out how how small of a space we can fit all of the world's music.
+            <br>
+            If you wanted to store 184,000,000 songs in as little space as possible, it could fit in...
+        </h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="streamingmincap.png" alt="Streaming">
+                <h2>~1,610 M.2 2230 SSDs<br>~3220 Terabytes</h2>
+            </div>
+        </div>
+        <h1 style="padding:4em;">Which would only take up ~0.0024 cubic meters!</h1>
+    </div>
     
-    <p>† All volume data is purely estimation based on the standard dimensions of physical formats and data size averages of commercial music.</p>
+    <div id="black-bar">
+        <p>† All volume data is purely estimation based on the standard dimensions of physical formats and data size averages of commercial music.</p>
     <p>* As of April 2024, the largest commercially available consumer hard drive has a storage size of 30 Terabytes.</p>
     <p>** In their 2023 Year End Report on the music industry, Luminate tracked ~184 million ISRCs on streaming platforms, each one representing an individual song.</p>
+    </div>
+    
     
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
@@ -176,7 +204,13 @@
       if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3941b5a4"));
     });
     </script>
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/c66c1d5ed01bd74e@275.js?v=4";
+    new Runtime().module(define, name => {
+    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3927447b"));
+    });
     </script>
     
 </body>
